@@ -16,3 +16,17 @@
     </tr>
   </tbody>
 </table>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let groupedVehicle of getGroupedVehicles()">
+      <td>Total {{ groupedVehicle }}: {{ getTotalByVehicle(groupedVehicle) }}</td>
+    </tr>
+  </tbody>
+</table>
