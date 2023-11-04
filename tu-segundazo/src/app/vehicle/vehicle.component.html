@@ -17,16 +17,12 @@
   </tbody>
 </table>
 
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>#</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let groupedVehicle of getGroupedVehicles()">
-      <td>Total {{ groupedVehicle }}: {{ getTotalByVehicle(groupedVehicle) }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="card" style="width: 20rem;">
+  <div class="card-header">
+    <h4>Información general</h4>
+  </div>
+  <ul class="list-group list-group-flush"
+    *ngFor="let groupedVehicle of getGroupedVehicles()">
+    <li class="list-group-item">Total {{ groupedVehicle }}: {{ getTotalByVehicle(groupedVehicle) }}</li>
+  </ul>
+</div>
